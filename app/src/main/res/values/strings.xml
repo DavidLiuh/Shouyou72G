@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Shouyou72G</string>
+    <string name="agree_ptotocal">我已阅读并接受<a href="http://www.sohu.com">注册协议</a></string>
+    <string name="agree_ptotocal1">我已阅读并接受<a href="ptotocal://">注册协议</a></string>
+</resources>
