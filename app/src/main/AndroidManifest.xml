@@ -33,6 +33,7 @@
         <activity android:name=".module.main.ui.RegisterActivity">
         </activity>
         <activity android:name=".module.main.ui.LoginActivity">
+
         </activity>
         <activity android:name=".module.main.ui.ProtocalActivity">
             <intent-filter>
@@ -40,6 +41,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <data android:scheme="ptotocal://"/>
             </intent-filter>
+        </activity>
+
+        <activity android:name=".module.money.ui.MyGame">
+
         </activity>
     </application>
 

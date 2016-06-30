@@ -19,13 +19,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         loadDatas();
     }
 
+    protected abstract int setViewId();
+
     protected abstract void findViews();
 
-    protected abstract int setViewId();
+    protected abstract void init();
 
     protected abstract void initEvents();
 
     protected abstract void loadDatas();
-
-    protected abstract void init();
 }

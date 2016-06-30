@@ -18,22 +18,22 @@ public abstract class BaseFragment extends Fragment {
         //return super.onCreateView(inflater, container, savedInstanceState);
         View view=inflater.inflate(setViewId(),container,false);
 
-        findViews();
+        findViews(view);
         init();
         initEvents();
         loadDatas();
         return view;
     }
 
-    protected abstract void loadDatas();
+    protected abstract int setViewId();
 
-    protected abstract void initEvents();
+    protected abstract void findViews(View view);
 
     protected abstract void init();
 
-    protected abstract void findViews();
+    protected abstract void initEvents();
 
-    protected abstract int setViewId();
+    protected abstract void loadDatas();
 
 
 }

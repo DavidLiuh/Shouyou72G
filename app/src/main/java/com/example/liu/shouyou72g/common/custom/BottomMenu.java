@@ -19,7 +19,7 @@ import com.example.liu.shouyou72g.R;
  */
 public class BottomMenu extends LinearLayout {
 
-    private  ImageView iv_main_menu;
+    private ImageView iv_main_menu;
     private TextView tv_main_menu;
     private int nor;
     private int pre;
@@ -45,29 +45,46 @@ public class BottomMenu extends LinearLayout {
 
 
     }
-    boolean bSelect=false;
+
+    boolean bSelect = false;
+
     //点击菜单时调用，切图，设动画
-    public void onSelect(){
+    public void onSelect() {
         if (bSelect) {
             return;
         } else {
-            bSelect=true;
+            bSelect = true;
             //切图，设为选中
             iv_main_menu.setImageResource(pre);
             //让标题执行平移动画，往下消失
-            TranslateAnimation tranAnim=new TranslateAnimation(Animation.RELATIVE_TO_SELF,0,
-                    Animation.RELATIVE_TO_SELF,0,
-                    Animation.RELATIVE_TO_SELF,0,
-                    Animation.RELATIVE_TO_SELF,1.0f);
+            TranslateAnimation tranAnim = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 1.0f);
             tranAnim.setFillAfter(true);
             tranAnim.setDuration(200);
             tv_main_menu.startAnimation(tranAnim);
             //让图片执行缩放
-            ScaleAnimation scaleAnim = new ScaleAnimation(1, 1.5f, 1, 1.5f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF, 0);
+            ScaleAnimation scaleAnim = new ScaleAnimation(1, 1.5f, 1, 1.5f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0);
             scaleAnim.setDuration(200);
             scaleAnim.setFillAfter(true);
             iv_main_menu.startAnimation(scaleAnim);
         }
     }
+
+    public void unSelect() {
+
+        bSelect = false;
+        //切图，设为未选中
+        iv_main_menu.setImageResource(nor);
+        //让标题执行平移动画，往上出现
+        TranslateAnimation tranAnim = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0f);
+        tranAnim.setFillAfter(true);
+        tranAnim.setDuration(200);
+        tv_main_menu.startAnimation(tranAnim);
+        //让图片执行缩放
+        ScaleAnimation scaleAnim = new ScaleAnimation(1.5f, 1f, 1.5f, 1f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0);
+        scaleAnim.setDuration(200);
+        scaleAnim.setFillAfter(true);
+        iv_main_menu.startAnimation(scaleAnim);
+    }
+
 
 }

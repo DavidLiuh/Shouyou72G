@@ -8,6 +8,7 @@
     tools:context=".module.main.ui.MainActivity">
 
     <LinearLayout
+        android:id="@+id/ll_main"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true">
@@ -56,6 +57,17 @@
             app:pressPic="@mipmap/ic_menu_05_hl"
             >
         </com.example.liu.shouyou72g.common.custom.BottomMenu>
-
     </LinearLayout>
+    <View
+        android:id="@+id/view_main"
+        android:layout_above="@+id/ll_main"
+        android:background="#298be1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_above="@+id/view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
 </RelativeLayout>

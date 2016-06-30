@@ -1,5 +1,7 @@
 package com.example.liu.shouyou72g.module.home.ui;
 
+import android.view.View;
+
 import com.example.liu.shouyou72g.R;
 import com.example.liu.shouyou72g.base.BaseFragment;
 
@@ -24,7 +26,7 @@ public class HomeFragment extends BaseFragment {
     }
 
     @Override
-    protected void findViews() {
+    protected void findViews(View view) {
 
     }
 
